@@ -35,6 +35,20 @@ var studenti = [
 ];
 // stampo in console il nome e il cognome degli studenti
 for (var i = 0; i < studenti.length; i++ ){
-  console.log(studenti[i]['nome']);
-  console.log(studenti[i]['cognome']);
+  console.log(studenti[i]['nome'] + " " + studenti[i]['cognome']);
 }
+
+// 3. inizializzo il nuovo oggetto e chiedo all'utente di aggiungere un nuovo studente attraverso prompt
+var nuovoStudente = [];
+nuovoStudente.nome = prompt("Inserisci il nome del nuovo studente");
+nuovoStudente.cognome = prompt("Inserisci il cognome del nuovo studente");
+nuovoStudente.eta = parseInt(prompt("Inserisci l'età del nuovo studente"));
+console.log(nuovoStudente);
+
+// 4. inserisco il nuovo studente nell'oggetto studenti
+studenti.push(nuovoStudente);
+// stampo la nuova lista di studenti
+for (var i = 0; i < studenti.length; i++ ){
+  console.log(studenti[i]['nome'] + " " + studenti[i]['cognome']);    
+}
+console.log(studenti);
